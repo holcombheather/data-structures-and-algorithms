@@ -9,18 +9,14 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  let incremented = [];
+  const localArray = [];
 
-  arr.forEach((number) => {
-    incremented.push(number + 1);
+  arr.forEach((num) => {
+    localArray.push(num + 1);
   });
 
-  return incremented;
+  return localArray;
 }
-
-let inputArray = [1, 2, 3, 4];
-let outputArray = addOne(inputArray);
-console.log(outputArray);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
