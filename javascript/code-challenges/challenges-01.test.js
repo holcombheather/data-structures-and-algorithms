@@ -38,7 +38,7 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
 
-xconst allUpperCase = (arr) => {
+const allUpperCase = (arr) => {
   // Solution code here...
 };
 
@@ -52,11 +52,11 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
-xconst greeting = (word) => {
+const greeting = (word) => {
   // Solution code here...
 };
 
-xconst speaker = (words, callback) => {
+const speaker = (words, callback) => {
   // Solution code here...
 };
 
@@ -76,11 +76,11 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-xconst addValues = (arr, value) => {
+const addValues = (arr, value) => {
   // Solution code here...
 };
 
-xconst addNumbers = (num, arr, times, callback) => {
+const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
 };
 
@@ -102,7 +102,7 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
-xconst createList = (availableItems) => {
+const createList = (availableItems) => {
   // Solution code here...
 };
 
@@ -120,7 +120,7 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
-xconst fizzbuzz = (arr) => {
+const fizzbuzz = (arr) => {
   // Solution code here...
 };
 
