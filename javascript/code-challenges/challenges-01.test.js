@@ -18,10 +18,8 @@ const addOne = (arr) => {
   return incremented;
 }
 
-addOne();
-// let inputArray = [1, 2, 3, 4];
-// let outputArray = addOne(inputArray);
-// console.log(outputArray);
+let inputArray = [1, 2, 3, 4];
+addOne(inputArray);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
