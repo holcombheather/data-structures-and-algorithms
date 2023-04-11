@@ -12,14 +12,15 @@ const addOne = (arr) => {
   let incremented = [];
 
   arr.forEach((number) => {
-    incremented.push(number +1);
+    incremented.push(number + 1);
   });
 
   return incremented;
 }
 
 let inputArray = [1, 2, 3, 4];
-addOne(inputArray);
+let outputArray = addOne(inputArray);
+console.log(outputArray);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
