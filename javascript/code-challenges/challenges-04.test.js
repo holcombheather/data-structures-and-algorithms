@@ -79,10 +79,8 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  const capitalCase = arr.filter((str) => str.charAt(0) === str.charAt(0).toUpperCase()).sort();
-  const lowerCase = arr.filter((str) => str.charAt(0) === str.charAt(0).toLowerCase()).sort();
-
-  return capitalCase.concat(lowerCase);
+  arr.sort();
+  return arr;
 }
 
 
