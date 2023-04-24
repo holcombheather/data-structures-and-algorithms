@@ -175,7 +175,7 @@ const hasChildrenValues = (arr, character) => {
 
     values.length === 4 ? hasChildren = true : hasChildren;
   }
- });
+ });n
 
  return hasChildren;
 };
