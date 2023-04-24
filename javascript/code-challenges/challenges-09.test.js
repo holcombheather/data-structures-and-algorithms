@@ -65,10 +65,17 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 ------------------------------------------------------------------------------------------------ */
 
-const updateNumbers = (obj) => {
-  return Object.entries(obj).map(([name, number]) => `${name}: ${number}`);
-};
+// const updateNumbers = (obj) => {
+//   return Object.entries(obj).map(([name, number]) => `${name}: ${number}`);
+// };
 
+// CODE REVIEW during Class 10
+
+const updateNumbers = (obj) => {
+    let newData = [];
+    Object.keys(obj).forEach(key => newData.push(`${key}: ${obj[key]}`));
+    return newData;
+}
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,6 +135,15 @@ const getHouses = (arr) => {
   return houses;
 };
 
+// CLASS DEMO
+// const getHouses = (arr) => {
+//   let houses = [];
+//   Object.values(arr).forEach(person => {
+//     houses.push(person.house);
+//   });
+//   return houses;
+// };
+
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -140,13 +156,28 @@ hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
+// const hasChildrenValues = (arr, character) => {
+//   const characterObj = arr.find((obj) => obj.name === character);
+//   if (!characterObj) {
+//     return false;
+//   }
+//   const children = Object.values(characterObj).find((value) => Array.isArray(value));
+//   return !!children && children.length > 0;
+// };
+
+// CLASS DEMO
 const hasChildrenValues = (arr, character) => {
-  const characterObj = arr.find((obj) => obj.name === character);
-  if (!characterObj) {
-    return false;
+ let hasChildren = false;
+
+ arr.forEach(person => {
+  if(person.name === character){
+    let values = Objects.values(person);
+
+    values.length === 4 ? hasChildren = true : hasChildren;
   }
-  const children = Object.values(characterObj).find((value) => Array.isArray(value));
-  return !!children && children.length > 0;
+ });
+
+ return hasChildren;
 };
 
 /* ------------------------------------------------------------------------------------------------
