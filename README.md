@@ -25,3 +25,4 @@ To run your tests
 #### Table of Contents
 
 - [Code Challenge 05](401-challenges/class-05/README.md)
+- [Code Challenge 06](401-challenges/class-06/README.md)
