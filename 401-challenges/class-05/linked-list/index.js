@@ -26,9 +26,9 @@ class LinkedList {
     if(!this.head){
       // in other words, if the list was empty, do this and done
       this.head = node;
-      return
+      return;
     }
-    let current = this.head
+    let current = this.head;
     while(current.next){
       current = current.next;
     }
@@ -79,4 +79,4 @@ list.append('d');
 
 console.log(JSON.stringify(list));
 console.log(list.includes('d'));
-module.exports = LinkedList
+module.exports = LinkedList;
