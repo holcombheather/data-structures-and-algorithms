@@ -25,9 +25,9 @@ class LinkedList {
     if(!this.head){
       // in other words, if the list was empty, do this and done
       this.head = node;
-      return
+      return;
     }
-    let current = this.head
+    let current = this.head;
     while(current.next){
       current = current.next;
     }
@@ -73,7 +73,7 @@ class LinkedList {
     const newNode = new Node(newValue);
 
     if (this.head === null) {
-      throw new Error("Can't insert before in an empty list.");
+      throw new Error('Can\'t insert before in an empty list.');
     }
 
     if (this.head.value === value) {
@@ -92,14 +92,14 @@ class LinkedList {
       current = current.next;
     }
 
-    throw new Error ("Value not found");
+    throw new Error ('Value not found');
   }
 
   insertAfter(value, newValue) {
     const newNode = new Node(newValue);
 
     if (this.head === null) {
-      throw new Error("Can't insert after in an empty list")
+      throw new Error('Can\'t insert after in an empty list');
     }
 
     let current = this.head;
@@ -128,4 +128,4 @@ console.log(list.includes('d'));
 console.log(list.append('f'));
 console.log(list.insertAfter('d','f'));
 console.log(list.insertBefore('b','f'));
-module.exports = LinkedList
+module.exports = LinkedList;
