@@ -143,7 +143,7 @@ describe('Linked List', () => {
     expect(linkedList.head.next.next.next).toBeNull();
   });
 
-///
+  ///
 
   // test('Where k is greater than the length of the linked list', () => {
   //   linkedList.append(1);
@@ -213,7 +213,7 @@ describe('Linked List', () => {
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
     expect(list.kthFromTheEnd(10)).toEqual(null);
   });
-  
+
   test('Where k and the length of the list are the same', () => {
     const list = new LinkedList();
     list.append('a');

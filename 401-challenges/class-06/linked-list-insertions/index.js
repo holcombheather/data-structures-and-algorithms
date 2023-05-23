@@ -133,7 +133,9 @@ class LinkedList {
       tailFinder = tailFinder.next;
       count++;
     }
-    if(k > count){
+    if (k > count) {
+      return null;
+    } if (k < 0) {
       return null;
     } else {
       return current.value;
