@@ -115,6 +115,31 @@ class LinkedList {
 
     throw new Error('Value not found');
   }
+
+  kthFromTheEnd(k) {
+
+    let tailFinder = this.head;
+    let count = 0;
+    let current = null;
+
+    while (tailFinder !== null) {
+      if (count > k - 1) {
+        if (current === null) {
+          current = this.head;
+        } else {
+          current = current.next;
+        }
+      }
+      tailFinder = tailFinder.next;
+      count++;
+    }
+    if(k > count){
+      return null;
+    } else {
+      return current.value;
+    }
+
+  }
 }
 
 let list = new LinkedList();
@@ -124,8 +149,9 @@ list.append('c');
 list.append('d');
 
 console.log(JSON.stringify(list));
-console.log(list.includes('d'));
-console.log(list.append('f'));
-console.log(list.insertAfter('d','f'));
-console.log(list.insertBefore('b','f'));
+// console.log(list.includes('d'));
+// console.log(list.append('f'));
+// console.log(list.insertAfter('d','f'));
+// console.log(list.insertBefore('b','f'));
+// console.log('kthFromTheEnd', list.kthFromTheEnd(2));
 module.exports = LinkedList;

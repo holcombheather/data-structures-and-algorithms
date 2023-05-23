@@ -4,7 +4,7 @@
 Extending an Implementation (Linked Lists)
 
 ## Whiteboard Process
-![whiteboard for class 06](401-challenges/class-06/whiteboard-class06.png)
+![whiteboard for class 06](401-challenges/assets/whiteboard-07.png)
 
 ## Approach & Efficiency
 - Create a Node class
@@ -13,17 +13,12 @@ Extending an Implementation (Linked Lists)
   - Upon instantiation, an empty Linked List should be created.
 
 The class should contain the following methods:
-- append
-  - Arguments: value
-  - Adds a new node with the given value to the end of the list
-- insert before
-  - Arguments: value, new value
-  - Adds a new node with the given new value immediately before the first node that has the value specified
-  - Arguments: value, new value
-  - Adds a new node with the given new value immediately after the first node that has the value specified
+- kth from end
+    - argument: a number, k, as a parameter.
+    - Return the node’s value that is k places from the tail of the linked list.
+    - You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
-
-Big 0
+**Big 0**
 - Time -> O(n)
 - Space -> O(1)
 

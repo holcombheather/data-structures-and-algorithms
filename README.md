@@ -26,3 +26,4 @@ To run your tests
 
 - [Code Challenge 05](401-challenges/class-05/README.md)
 - [Code Challenge 06](401-challenges/class-06/README.md)
+- [Code Challenge 07](401-challenges/class-07.md)

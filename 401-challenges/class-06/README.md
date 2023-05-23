@@ -4,7 +4,7 @@
 Extending an Implementation (Linked Lists)
 
 ## Whiteboard Process
-![whiteboard for class 06](401-challenges/class-06/whiteboard-class06.png)
+![whiteboard for class 06](401-challenges/assets/whiteboard-06.png)
 
 ## Approach & Efficiency
 - Create a Node class
