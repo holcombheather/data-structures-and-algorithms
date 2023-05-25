@@ -144,6 +144,28 @@ class LinkedList {
   }
 }
 
+
+
+const zipList = (list1, list2) => {
+  let current1 = list1.head;
+  let current2 = list2.head;
+
+  while (current1 && current2) {
+    let next1 = current1.next;
+    let next2 = current2.next;
+    current1.next = current2;
+    if (next1) {
+      current2.next = next1;
+    }
+    current1 = next1;
+    current2 = next2;
+
+  }
+
+  return list1.head ? list1 : list2;
+};
+
+
 let list = new LinkedList();
 list.append('a');
 list.append('b');
@@ -156,4 +178,22 @@ console.log(JSON.stringify(list));
 // console.log(list.insertAfter('d','f'));
 // console.log(list.insertBefore('b','f'));
 // console.log('kthFromTheEnd', list.kthFromTheEnd(2));
-module.exports = LinkedList;
+
+let list1 = new LinkedList();
+list1.append('1');
+list1.append('2');
+list1.append('3');
+list1.append('4');
+
+let list2 = new LinkedList();
+list2.append('a');
+list2.append('b');
+list2.append('c');
+list2.append('d');
+
+console.log(JSON.stringify(list1));
+console.log(JSON.stringify(list2));
+let zipResult = zipList(list1, list2);
+console.log(JSON.stringify(zipResult));
+
+module.exports = { LinkedList, zipList };

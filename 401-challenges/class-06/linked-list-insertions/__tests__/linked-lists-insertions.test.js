@@ -1,6 +1,6 @@
 'use strict';
 
-const LinkedList = require('../index');
+const { LinkedList, zipList }= require('../index');
 
 describe('Linked List', () => {
   let linkedList;
@@ -252,3 +252,97 @@ describe('Linked List', () => {
   });
 
 });
+
+/// tests for zipList
+
+describe('zipList', () => {
+  // Provided test cases (Happy path)
+  test('Should zip two lists with different lengths', () => {
+    const list1 = new LinkedList();
+    list1.append(1);
+    list1.append(3);
+    list1.append(2);
+
+    const list2 = new LinkedList();
+    list2.append(5);
+    list2.append(9);
+    list2.append(4);
+
+    const result = zipList(list1, list2);
+
+    expect(result.toString()).toContain('{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL');
+  });
+
+  test('Should zip two lists with different lengths and one empty list', () => {
+    const list1 = new LinkedList();
+    list1.append(1);
+    list1.append(3);
+
+    const list2 = new LinkedList();
+
+    const result = zipList(list1, list2);
+
+    expect(result.toString()).toContain('{ 1 } -> { 3 } -> NULL');
+  });
+
+  test('Should zip two lists with different lengths and one list ends early', () => {
+    const list1 = new LinkedList();
+    list1.append(1);
+    list1.append(3);
+    list1.append(2);
+
+    const list2 = new LinkedList();
+    list2.append(5);
+    list2.append(9);
+
+    const result = zipList(list1, list2);
+
+    expect(result.toString()).toContain('{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> NULL');
+  });
+
+  // Additional test cases
+  test('Should return an empty list if both input lists are empty', () => {
+    const list1 = new LinkedList();
+    const list2 = new LinkedList();
+
+    const result = zipList(list1, list2);
+
+    expect(result.toString()).toBe('NULL');
+  });
+
+  test('Should zip two lists with different lengths and return the remainder of the longer list', () => {
+    const list1 = new LinkedList();
+    list1.append(1);
+    list1.append(3);
+    list1.append(5);
+
+    const list2 = new LinkedList();
+    list2.append(2);
+    list2.append(4);
+    list2.append(6);
+    list2.append(8);
+
+    const result = zipList(list1, list2);
+
+    expect(result.toString()).toContain('{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> { 8 } -> NULL');
+  });
+
+  test('Should zip two lists with different values', () => {
+    const list1 = new LinkedList();
+    list1.append(1);
+    list1.append('a');
+    list1.append(true);
+
+    const list2 = new LinkedList();
+    list2.append(2);
+    list2.append('b');
+    list2.append(false);
+
+    const result = zipList(list1, list2);
+
+    expect(result.toString()).toContain('{ 1 } -> { 2 } -> { a } -> { b } -> { true } -> { false } -> NULL');
+  });
+});
+
+
+

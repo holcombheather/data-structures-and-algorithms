@@ -4,7 +4,7 @@
 Extending an Implementation: k-th value from the end of a linked list:
 
 ## Whiteboard Process
-![whiteboard for class 06](401-challenges/assets/whiteboard-07.png)
+![whiteboard](401-challenges/assets/whiteboard-07.png)
 
 ## Approach & Efficiency
 - Create a Node class
