@@ -39,45 +39,68 @@ class Stack {
   }
 }
 
-class Queue {
+// class Queue {
+//   constructor() {
+//     this.front = null;
+//     this.rear = null;
+//   }
+
+//   enqueue(value) {
+//     let newNode = new Node(value);
+//     if (this.isEmpty()) {
+//       this.front = newNode;
+//       this.rear = newNode;
+//     } else {
+//       this.rear.next = newNode;
+//       this.rear = newNode;
+//     }
+//   }
+
+//   dequeue() {
+//     if (this.isEmpty()) {
+//       throw new Error('Queue is empty');
+//     }
+//     let dequeuedValue = this.front.value;
+//     this.front = this.front.next;
+//     if (this.front === null) {
+//       this.rear = null;
+//     }
+//     return dequeuedValue;
+//   }
+
+//   peek() {
+//     if (this.isEmpty()) {
+//       throw new Error('Queue is empty');
+//     }
+//     return this.front.value;
+//   }
+
+//   isEmpty() {
+//     return this.front === null;
+//   }
+// }
+
+class PseudoQueue {
   constructor() {
-    this.front = null;
-    this.rear = null;
+    this.stack1 = new Stack();
+    this.stack2 = new Stack();
   }
 
   enqueue(value) {
-    let newNode = new Node(value);
-    if (this.isEmpty()) {
-      this.front = newNode;
-      this.rear = newNode;
-    } else {
-      this.rear.next = newNode;
-      this.rear = newNode;
+    while (!this.stack1.isEmpty()) {
+      this.stack2.push(this.stack1.pop());
+    }
+    this.stack1.push(value);
+    while (!this.stack2.isEmpty()) {
+      this.stack1.push(this.stack2.pop());
     }
   }
-
   dequeue() {
-    if (this.isEmpty()) {
-      throw new Error('Queue is empty');
+    if (this.stack1.isEmpty()) {
+      return null;
     }
-    let dequeuedValue = this.front.value;
-    this.front = this.front.next;
-    if (this.front === null) {
-      this.rear = null;
-    }
-    return dequeuedValue;
-  }
-
-  peek() {
-    if (this.isEmpty()) {
-      throw new Error('Queue is empty');
-    }
-    return this.front.value;
-  }
-
-  isEmpty() {
-    return this.front === null;
+    return this.stack1.pop();
   }
 }
 
-module.exports = { Node, Stack, Queue };
+module.exports = { Node, Stack, PseudoQueue };
