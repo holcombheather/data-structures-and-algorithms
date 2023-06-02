@@ -5,7 +5,7 @@ Reverse Array
 
 ## Whiteboard Process
 
-![Whiteboard Screenshot](/401-challenges/class-01/whiteboard-01.png)
+![Whiteboard Screenshot](/401-challenges/assets/whiteboard-01.png)
 
 ## Approach & Efficiency
 Took swapping the front and end of the array until the entire array was reverse.

@@ -4,7 +4,7 @@
 Extending an Implementation: Zip two linked lists
 
 ## Whiteboard Process
-![whiteboard](401-challenges/assets/whiteboard-08.png)
+![whiteboard](/401-challenges/assets/whiteboard-08.png)
 
 ## Approach & Efficiency
 - Write a function called zip lists

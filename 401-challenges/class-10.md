@@ -4,7 +4,7 @@
 New Implementation: Stacks and Queues
 
 ## Whiteboard Process
-![whiteboard](401-challenges/assets/whiteboard-10.png)
+![whiteboard](/401-challenges/assets/whiteboard-10.png)
 
 ## Approach & Efficiency
 - Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
