@@ -4,7 +4,7 @@
 New Implementation: PseudoQueue
 
 ## Whiteboard Process
-![whiteboard](401-challenges/assets/whiteboard-11.png)
+![whiteboard](/401-challenges/assets/whiteboard-11.png)
 
 ## Approach & Efficiency
 - Create a new class called pseudo queue.

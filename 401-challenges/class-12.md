@@ -4,7 +4,7 @@
 First-in, First out Animal Shelter.
 
 ## Whiteboard Process
-![whiteboard](401-challenges/assets/whiteboard-12.png)
+![whiteboard](/401-challenges/assets/whiteboard-12.png)
 
 ## Approach & Efficiency
 - Create a class called AnimalShelter which holds only dogs and cats.
