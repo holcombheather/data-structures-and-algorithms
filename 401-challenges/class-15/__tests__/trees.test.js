@@ -89,3 +89,31 @@ describe('Binary Tree and Binary Search Tree', () => {
     expect(bst.contains(20)).toBe(false);
   });
 });
+
+describe('findMaxValue', () => {
+  it('returns null for an empty tree', () => {
+    const tree = new BinaryTree();
+    expect(tree.findMaxValue()).toEqual(null);
+  });
+
+  it('returns the value of the root node for a tree with one node', () => {
+    const tree = new BinaryTree(new Node(42));
+    expect(tree.findMaxValue()).toEqual(42);
+  });
+
+  it('returns the maximum value for a tree with multiple nodes', () => {
+    const root = new Node(1);
+    root.left = new Node(2);
+    root.right = new Node(3);
+    const tree = new BinaryTree(root);
+    expect(tree.findMaxValue()).toEqual(3);
+  });
+
+  it('returns the maximum value for a tree with negative numbers', () => {
+    const root = new Node(-10);
+    root.left = new Node(-20);
+    root.right = new Node(-30);
+    const tree = new BinaryTree(root);
+    expect(tree.findMaxValue()).toEqual(-10);
+  });
+});

@@ -48,6 +48,27 @@ class BinaryTree {
     traverse(this.root);
     return result;
   }
+
+  findMaxValue() {
+    if (!this.root) return null;
+    
+    let max = -Infinity;
+
+    const traverse = (node) => {
+      if (!node) return;
+
+      if (node.value > max) {
+        max = node.value;
+      }
+
+      traverse(node.left);
+      traverse(node.right);
+    };
+
+    traverse(this.root);
+
+    return max;
+  }
 }
 
 class BinarySearchTree extends BinaryTree {
