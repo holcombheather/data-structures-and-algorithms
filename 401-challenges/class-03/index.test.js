@@ -1,4 +1,4 @@
-const binarySearch = require('./index');  // assuming that binarySearch is exported from index.js
+const { binarySearch } = require('./index');
 
 describe('Binary Search', () => {
   test('should return the index of the element if it is in the array', () => {
