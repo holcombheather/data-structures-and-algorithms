@@ -3,8 +3,6 @@
 # Challenge Title
 Binary search in a sorted 1D array
 
-
-
 ## Whiteboard Process
 
 ![whiteboard](/401-challenges/assets/whiteboard-03.png)
@@ -23,7 +21,22 @@ see [index.js](401-challenges/class-03/index.js)
 
 ## Tests
 
+ PASS  ./index.test.js
+  Binary Search
+    ✓ should return the index of the element if it is in the array
+    ✓ should return -1 if the element is not in the array
+    ✓ should handle edge cases like an empty array or a one-element array
 
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+----------|---------|----------|---------|---------|-------------------
+All files |     100 |      100 |     100 |     100 |
+ index.js |     100 |      100 |     100 |     100 |
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.187 s, estimated 1 s
 
 ## References & Collaborations
 

@@ -25,6 +25,8 @@ To run your tests
 #### Table of Contents
 
 - [Code Challenge 01](401-challenges/class-01.md)
+- [Code Challenge 02](401-challenges/class-02.md)
+- [Code Challenge 03](401-challenges/class-03.md)
 - [Code Challenge 04](401-challenges/class-04.md)
 - [Code Challenge 05](401-challenges/class-05/README.md)
 - [Code Challenge 06](401-challenges/class-06/README.md)
