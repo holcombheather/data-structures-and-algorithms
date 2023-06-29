@@ -1,0 +1,17 @@
+{
+  "name": "class-30",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
+  }
+}
