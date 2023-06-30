@@ -80,4 +80,16 @@ class Hashtable {
   }
 }
 
-module.exports = { Node, Hashtable };
+function leftJoin(hm1, hm2) {
+  let result = [];
+  for (let key in hm1) {
+    if (hm1.hasOwnProperty(key)) {
+      let value1 = hm1[key];
+      let value2 = hm2.hasOwnProperty(key) ? hm2[key] : null;
+      result.push([key, value1, value2]);
+    }
+  }
+  return result;
+}
+
+module.exports = { Node, Hashtable, leftJoin };
