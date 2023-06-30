@@ -4,51 +4,40 @@
 
 ## Whiteboard Process
 
-![whiteboard](./whiteboard-32.png)
+![whiteboard](./assets/whiteboard-32.png)
 
 ## Approach & Efficiency
 
-This implementation of a hashtable uses chaining for collision handling. When two keys hash to the same index, a linked list is created at that index to store both key-value pairs. The hashtable includes methods for setting a key-value pair, retrieving a value by key, checking if a key exists, returning all keys, and generating a hash for a given key.
+**Challenge**
+- Write a function called tree_intersection that takes two binary trees as parameters.
+- Using your Hashmap implementation as a part of your algorithm, return a set of values found in both trees.
+
+**Approach**
+The approach I took for this problem involved using a hash table to store and look up values for efficiency. 
+
+**Efficiency**:
+The time complexity of this solution is O(n), where n is the number of nodes in the larger tree. This is because each node in both trees needs to be visited once in order to compare all the values.
+
+The space complexity is also O(n) for the same reason. In the worst-case scenario (when all values are unique), every value from the first tree would need to be stored in the hashtable. So the space required grows linearly with the size of the tree.
+
+This approach is efficient because it allows us to quickly check if a value from the second tree is in the first tree by checking the hashtable, which can be done in constant time. This prevents the need for a nested loop, which would have a time complexity of O(n^2).
 
 **Big O:**
 
-- Time Complexity:
-  - Set: O(1) average case, O(n) worst case
-  - Get: O(1) average case, O(n) worst case
-  - Has: O(1) average case, O(n) worst case
-  - Keys: O(n)
-
-- Space Complexity: O(n), where 'n' is the total number of keys stored in the hashtable.
+- Time -> O(n)
+- Space -> O(n)
 
 ## Solution
 
-See [index.js](401-challenges/class-30/index.js)
+See [index.js](class-30/treeIntersection/tree-intersection.js)
 
 ## Tests
 
-Test cases include:
-
-- Setting a key-value pair in the hashtable
-- Retrieving the value associated with a given key
-- Checking if a key exists in the hashtable
-- Successfully returning a list of all unique keys in the hashtable
-- Handling collisions within the hashtable
-- Retrieving a value from a bucket within the hashtable that has a collision
-- Generating a hash for a given key that is within range
-
-```
-PASS  __tests__/hashtable.test.js
-  Hashtable
-    ✓ Can successfully set a key-value pair in the hashtable (1 ms)
-    ✓ Can successfully get the value associated with a given key
-    ✓ Can successfully check if a key exists in the hashtable (1 ms)
-    ✓ Can successfully return a list of all unique keys in the hashtable
-    ✓ Can successfully handle a collision within the hashtable
-    ✓ Can successfully retrieve a value from a bucket within the hashtable that has a collision
-    ✓ Can successfully hash a key to an in-range value
-```
-
-*Note: replace the above with the actual test results from your code.*
+ PASS  treeIntersection/tree-intersection.test.js
+  treeIntersection
+    ✓ should find common values in 2 binary trees (1 ms)
+    ✓ should return an empty array if there are no common values
+    ✓ should return an empty array if one or both of the trees are empty (1 ms)
 
 ## References & Collaborations
 
